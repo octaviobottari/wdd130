@@ -1,14 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+
 :root {
-    --primary-color: #5AA9E6;        /* Navbar background */
-    --secondary-color: #FF6392;      /* Footer background and button color */
-    --accent-color: #7FC8F8;          /* Navbar link hover color */
-    --highlight-color: #FFE45E;       /* Highlight color */
-    --background-color: #067681;      /* Section background */
-    --text-color-light: #F9F9F9;      /* Light text color */
-    --text-color-dark: #2c3e50;       /* Dark text color */
-    --font-montserrat: 'Montserrat';   /* Montserrat font */
-    --font-opensans: 'Open Sans';      /* Open Sans font */
+    --primary-color: #5AA9E6;
+    --secondary-color: #FF6392;
+    --accent-color: #7FC8F8;
+    --highlight-color: #FFE45E;
+    --background-color: #067681;
+    --text-color-light: #F9F9F9;
+    --text-color-dark: #2c3e50;
+    --font-montserrat: 'Montserrat', sans-serif;
+    --font-opensans: 'Open Sans', sans-serif;
 }
+
 
 html, body {
     width: 100%;
@@ -22,6 +25,7 @@ body {
     box-sizing: border-box;
 }
 
+
 body h1, body h2, body h3, body h4 {
     font-family: var(--font-montserrat);
 }
@@ -30,11 +34,17 @@ body p {
     font-family: var(--font-opensans);
 }
 
-.navbar {
+
+header {
+    display: grid; 
+    grid-template-columns: auto 1fr auto;
+    align-items: center; 
     background-color: var(--primary-color);
-    padding: 10px 20px;
-    text-align: left;
+    padding: 10px 20px; 
     border-bottom: 4px solid var(--accent-color);
+}
+
+.navbar {
     display: flex;
     align-items: center;
 }
@@ -165,6 +175,12 @@ section {
     text-align: center;
 }
 
+section p {
+    max-width: 800px; 
+    margin: 0 auto;  
+    padding: 0;       
+}
+
 section img {
     width: 200px; 
     height: 200px; 
@@ -176,5 +192,44 @@ section img {
 
 section img:hover {
     background-color: rgb(255, 255, 255);
+    opacity: 0.7;
+}
+
+
+section div {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    color: var(--highlight-color);
+    font-size: 0.9rem;
+    font-family: 'Open Sans';
+    font-weight: bold;
+}
+
+footer div {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-right: 1rem;
+}
+
+footer div a img {
+    width: 30px;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+footer div a img:hover {
     opacity: 0.7;
 }
