@@ -106,7 +106,7 @@ main p {
     align-items: center;
 }
 
-.hero h1 {
+.hero h1{
     font-size: 2.5rem;
     font-family: var(--font-montserrat);
     color: var(--text-color-light);
@@ -114,6 +114,12 @@ main p {
          0 0 10px rgba(0, 0, 0, 0.5);  
     margin: 0;
     z-index: 2;
+}
+
+.hero h2{
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8),  
+         0 0 10px rgba(0, 0, 0, 0.5);  
+    color: var(--highlight-color)
 }
 
 .hero article {
@@ -142,6 +148,7 @@ main p {
     flex: 1; 
 }
 
+
 .hero-button {
     position: absolute;
     bottom: 0;
@@ -161,6 +168,11 @@ main p {
     background-color: #FFA000;
 }
 
+.hero a{
+    text-decoration: none;
+    color: #fff;
+}
+
 .highlight {
     color: var(--highlight-color);
 }
@@ -178,7 +190,7 @@ section {
 section p {
     max-width: 800px; 
     margin: 0 auto;  
-    padding: 0;       
+    padding-bottom: 15px;
 }
 
 section img {
@@ -203,6 +215,25 @@ section div {
     flex-wrap: wrap;
 }
 
+section button{
+    padding: 0.5rem 1rem;
+
+    font-size: 1rem;
+    font-style: italic;
+    color: #fff;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    border: 0ch;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+section button:hover{
+    background-color: #FFA000;
+}
+
+
+
 figure {
     display: flex;
     flex-direction: column;
@@ -211,11 +242,49 @@ figure {
 
 figcaption {
     margin-top: 0.5rem;
-    color: var(--highlight-color);
     font-size: 0.9rem;
     font-family: 'Open Sans';
     font-weight: bold;
 }
+
+label {
+    font-family: var(--font-opensans);
+    font-weight: bold;
+    color: var(--secondary-color);
+    display: block; 
+    margin-bottom: 0.5rem; 
+}
+
+input[type="text"], input[type="email"], input[type="password"], textarea {
+    width: 400px;
+    padding: 10px; 
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 1rem; 
+    resize: none;
+}
+
+input[type="radio"]{
+    position: relative;
+    bottom: 5px; 
+    left: 10px;
+}
+
+input[type="checkbox"]{
+    position: relative;
+    bottom: 3.4px; 
+    left: 10px;
+}
+
+form {
+    display: block;
+    flex-direction: column; 
+    max-width: 600px; 
+    margin: 0 auto; 
+}
+
+
 
 footer div {
     display: flex;
